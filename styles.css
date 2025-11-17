@@ -33,6 +33,8 @@ header {
     background-color: var(--blanco);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
+    height: 80px;
+    overflow: visible;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -45,14 +47,16 @@ header .container {
 }
 
 .logo img {
-    height: 70px;
+    height: 110px;
     width: auto;
+    margin-top: -30px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-top: -30px;
 }
 
 nav a {
@@ -87,7 +91,46 @@ h2 {
 
 /* === SECCIONES === */
 section {
-    padding: 80px 0;
+     padding: 50px 0 70px 0 !important;
+}
+
+/* === MISIÓN / VALORES / VENTAJA COMPETITIVA === */
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.vision-item {
+    background-color: var(--blanco);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.vision-item h3 {
+    font-size: 1.5rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 1rem;
+}
+
+.vision-item p {
+    color: var(--gris-texto);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.vision-list {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-list li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    color: #444;
 }
 
 /* === PRODUCTO (FEATURES) === */
@@ -325,5 +368,145 @@ footer {
     }
     .quienes-texto p {
         text-align: center;
+    }
+}
+
+/* ================================
+   RESPONSIVE GENERAL
+================================ */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+
+    nav ul {
+        gap: 1.3rem;
+        font-size: 0.95rem;
+    }
+
+    h2 {
+        font-size: 2.1rem;
+    }
+
+    /* Sección Quienes Somos */
+    .quienes-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .quienes-texto p {
+        text-align: center;
+    }
+    
+    /* Tarjeta del producto */
+    .product-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Móviles grandes (≤ 768px) */
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .logo img {
+        height: 85px;
+        margin-top: -10px;
+    }
+
+    nav ul {
+        margin-top: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .product-info {
+        padding: 1.8rem;
+    }
+
+    .price {
+        font-size: 1.7rem;
+    }
+
+    #contact-form {
+        padding: 2rem;
+    }
+}
+
+/* Móviles pequeños (≤ 576px) */
+@media (max-width: 576px) {
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        gap: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        padding: 1.6rem 1rem;
+    }
+
+    .product-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .btn-comprar,
+    .btn-enviar {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+
+    .ad-placeholder img {
+        width: 200px;
+    }
+}
+
+/* Extra pequeño (≤ 400px) */
+@media (max-width: 400px) {
+
+    nav ul {
+        gap: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        height: 65px;
+    }
+
+    .product-info {
+        padding: 1.4rem;
+    }
+
+    .feature-item img {
+        width: 80px;
+        height: 80px;
     }
 }

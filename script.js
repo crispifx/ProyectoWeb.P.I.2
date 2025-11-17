@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         event.preventDefault();
 
-        alert("✅ Mensaje enviado con éxito. Gracias por tu interés. Nos pondremos en contacto pronto.");
+        alert("Mensaje enviado con éxito. Gracias por tu interés. Nos pondremos en contacto pronto.");
 
         contactForm.reset();
     });
